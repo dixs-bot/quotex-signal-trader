@@ -1,0 +1,14 @@
+{
+  "name": "quotex-signal-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "vite": "^5"
+  }
+}

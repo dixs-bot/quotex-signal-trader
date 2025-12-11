@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.status-indicator {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pair-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.pair-card:hover {
+    transform: translateY(-5px);
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.indicator {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.rsi { background: #e3f2fd; color: #1976d2; }
+.macd { background: #f3e5f5; color: #7b1fa2; }
+.bollinger { background: #e8f5e9; color: #388e3c; }
+
+.signal {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signal.buy { background: #c8e6c9; color: #2e7d32; }
+.signal.sell { background: #ffcdd2; color: #c62828; }
+.signal.wait { background: #fff3e0; color: #ef6c00; }
+
+.settings {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.setting-item input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .indicators {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .pair-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

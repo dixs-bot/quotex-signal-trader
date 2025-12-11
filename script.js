@@ -135,7 +135,51 @@ class QuotexSignalTrader {
     }
 }
 
+// Tambahkan di script.js
+class AuthManager {
+    constructor() {
+        this.isLoggedIn = false;
+    }
+
+    login(apiKey) {
+        // Implement login logic
+    }
+
+    logout() {
+        // Implement logout logic
+    }
+}
+
+// Tambahkan di script.js
+class TradeHistory {
+    constructor() {
+        this.history = [];
+    }
+
+    addTrade(pair, signal, result) {
+        this.history.push({ pair, signal, result, timestamp: new Date() });
+    }
+
+    getHistory() {
+        return this.history;
+    }
+}
+
+// Tambahkan di script.js
+class NotificationManager {
+    constructor() {
+        this.notifications = [];
+    }
+
+    sendSignalNotification(pair, signal) {
+        // Implement notification
+        if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification(`${pair} Signal: ${signal}`);
+        }
+    }
+}
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     new QuotexSignalTrader();
 });
+
